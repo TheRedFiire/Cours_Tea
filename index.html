@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction aux Sciences Cognitives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Augmentation de la taille de la police globale */
+        body {
+            font-size: 1.125rem;
+            /* 18px */
+        }
+
+        /* Style uniforme pour toutes les boîtes de contenu */
+        .content-box {
+            background-color: #f9fafb;
+            /* bg-gray-50 */
+            padding: 1.5rem;
+            /* p-6 */
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* shadow-lg */
+            margin-bottom: 1.5rem;
+        }
+
+        /* Style pour les titres importants */
+        .important {
+            font-weight: 700;
+            /* bold */
+            text-decoration: underline;
+        }
+
+        /* Style pour les boîtes de groupe d'auteurs */
+        .author-group {
+            background-color: #e0f7fa;
+            /* bg-teal-100 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            flex: 1;
+        }
+
+        .author-group.bg-green-100 {
+            background-color: #e8f5e9;
+            /* bg-green-100 */
+        }
+
+        .author-group.bg-yellow-100 {
+            background-color: #fffde7;
+            /* bg-yellow-100 */
+        }
+
+        .author-group.bg-indigo-100 {
+            background-color: #e3f2fd;
+            /* bg-indigo-100 */
+        }
+
+        .author-group.bg-pink-100 {
+            background-color: #fce4ec;
+            /* bg-pink-100 */
+        }
+
+        /* Style pour les tableaux */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #e5e7eb;
+            /* border-gray-200 */
+            padding: 0.75rem;
+            /* p-3 */
+            text-align: left;
+        }
+
+        th {
+            background-color: #f3f4f6;
+            /* bg-gray-100 */
+            font-weight: 600;
+            /* font-semibold */
+        }
+
+        /* Style pour les liens */
+        a {
+            color: #2563eb;
+            /* text-blue-600 */
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style pour les blockquotes */
+        blockquote {
+            border-left: 4px solid #e5e7eb;
+            padding-left: 1rem;
+            color: #6b7280;
+            /* text-gray-500 */
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Style pour les codes inline */
+        code {
+            background-color: #f3f4f6;
+            /* bg-gray-100 */
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            /* rounded */
+            font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 0.875rem;
+            /* text-sm */
+        }
+
+        /* Style pour les sections */
+        section {
+            scroll-margin-top: 6rem;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        @media print {
+            body {
+                height: auto;
+            }
+
+            html,
+            body {
+                width: 100%;
+                overflow: visible;
+                margin: 0;
+                padding: 0;
+            }
+
+            * {
+                page-break-before: avoid;
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+
+            .container {
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+    <!-- Couverture -->
+    <header class="bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20 px-6 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold mb-4">📚 Introduction aux Sciences Cognitives</h1>
+            <h2 class="text-3xl font-medium mb-6">✨ Un voyage à travers l’histoire et les concepts clés</h2>
+        </div>
+    </header>
+
+    <main class="py-16 bg-gray-50">
+        <!-- Présentation -->
+        <section id="presentation" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Présentation du Cours 📘</h2>
+                <p class="text-gray-700 mb-6">
+                    Les sciences cognitives sont un domaine interdisciplinaire qui vise à comprendre les mécanismes de
+                    la pensée, de la perception, de la mémoire, du langage et de l’apprentissage. Ce cours offre une
+                    introduction aux fondements historiques et théoriques des sciences cognitives, en explorant les
+                    contributions de diverses disciplines telles que la philosophie, la psychologie, la neurobiologie,
+                    l’informatique et la linguistique.
+                </p>
+                <h3 class="text-3xl font-semibold mb-2">Définition de la Psychologie Cognitive 🧠</h3>
+                <p class="text-gray-700 mb-6">
+                    La psychologie cognitive est héritière d’une longue tradition philosophique depuis l’Antiquité. Elle
+                    s’est progressivement détachée de la philosophie à la fin du XIXᵉ siècle. Elle appartient
+                    aujourd'hui aux sciences cognitives, au sein desquelles elle occupe une place singulière. Son objet
+                    d’étude a été modifié, introduisant de nouvelles questions et de nouvelles méthodes.
+                </p>
+                <h3 class="text-3xl font-semibold mb-2">Objectifs du Cours 🎯</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><span class="font-bold underline">Comprendre</span> les origines historiques des sciences
+                        cognitives.</li>
+                    <li><span class="font-bold underline">Examiner</span> les concepts clés et les théories
+                        fondamentales.</li>
+                    <li><span class="font-bold underline">Analyser</span> les méthodes et les approches empiriques des
+                        sciences cognitives.</li>
+                </ul>
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Questions Fondamentales ❓</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Quelle est la nature des capacités initiales à la source du processus d’acquisition ?</li>
+                    <li>Comment les processus d’acquisition se mettent en place ?</li>
+                    <li>Quelles sont les phases charnières (étapes de transition) dans le processus global d’acquisition
+                        ?</li>
+                </ul>
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Évolution de la Psychologie Cognitive 🧭</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Héritière d’une longue tradition philosophique depuis l’Antiquité, la psychologie cognitive s’est
+                    progressivement détachée de la philosophie à la fin du XIXe siècle. Elle appartient aujourd'hui aux
+                    sciences cognitives, au sein desquelles elle occupe une place singulière. Son objet d’étude a été
+                    modifié, introduisant de nouvelles questions et de nouvelles méthodes.
+                </p>
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Plan du Cours 🗺️</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Ce cours est structuré en plusieurs sections qui couvrent les origines historiques, les fondements
+                    de la psychologie scientifique, les grands courants du XXe siècle, l'émergence des sciences
+                    cognitives et les développements actuels dans le domaine.
+                </p>
+                <!-- Informations de Contact -->
+                <div class="author-group bg-yellow-100 mt-6">
+                    <h3 class="text-3xl font-semibold mb-2">Informations de Contact 📧</h3>
+                    <p class="text-gray-700">
+                        <strong>Enseignante :</strong> Stéphanie Massol<br>
+                        <strong>Email :</strong> <a href="mailto:stephanie.massol@univ-lyon2.fr"
+                            class="text-blue-600 hover:underline">stephanie.massol@univ-lyon2.fr</a><br>
+                        <strong>Poste :</strong> Maître de Conférences au Laboratoire d’Étude des Mécanismes
+                        Cognitifs<br>
+                        <strong>Université :</strong> Université Lyon 2<br>
+                        <strong>Cours :</strong> L1 – Sciences Cognitives – CM 2 à CM 5 – Introduction
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Origines Historiques -->
+        <section id="origines" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Origines Historiques des Sciences Cognitives 🏛️
+                </h2>
+
+                <h3 class="text-3xl font-semibold mb-2">L’Antiquité : Premières Réflexions sur l’Esprit et le Corps 🧠💭
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La Grèce ancienne a été le berceau des premières réflexions sur la distinction entre le monde
+                    physique (sciences de la matière) et l’âme ou l’esprit (théologie). Les philosophes grecs ont posé
+                    les fondements de la pensée occidentale sur la nature de la connaissance et de la conscience.
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Platon</strong> : A initié des réflexions sur la nature de la pensée, distinguant l’âme
+                        immatérielle du corps matériel et considérant que l’âme pilote le corps.</li>
+                    <li><strong>Aristote</strong> : Considéra que les idées ne sont pas innées et que pour bien
+                        comprendre le monde, il faut établir un lien logique et rigoureux entre les choses et les mots.
+                        Son traité <em>De l'âme</em> peut être considéré comme le premier ouvrage complet de
+                        psychologie.</li>
+                </ul>
+
+                <div class="author-group flex flex-col sm:flex-row sm:space-x-4 mt-4">
+                    <div
+                        class="flex-1 bg-blue-100 p-4 rounded-lg shadow transition transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <h4 class="text-xl font-semibold mb-2">Les Philosophes Grecs 🏺</h4>
+                        <ul class="list-disc pl-4 text-gray-700 space-y-2">
+                            <li><strong>Alcméon de Crotone (500 av. J.-C.)</strong> : Le premier à faire du cerveau le
+                                siège de la compréhension, distinguant compréhension et perception. Il pensait que les
+                                organes sensoriels sont reliés au cerveau par des canaux.</li>
+                            <li><strong>Hippocrate (400 av. J.-C.)</strong> : Contribution majeure à l'étude du cerveau
+                                comme centre des sensations et siège de l'intelligence. Il donne les bases biologiques à
+                                la maladie, qui jusqu’à présent était considérée comme divine, et développe la
+                                <strong>théorie des humeurs</strong>.</li>
+                            <li><strong>Claude Galien (131-201)</strong> : Ouvre la voie à des démarches d'expériences
+                                physiologiques, d'anatomie et de diagnostic. L'anatomie est pour lui un moyen d'accès à
+                                la compréhension des processus physiologiques.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="text-2xl font-medium mt-6 mb-2">Théorie des Humeurs d'Hippocrate 🩸</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Hippocrate introduit la théorie des humeurs, où les quatre liquides du corps (bile jaune, bile
+                    noire, flegme et sang) transmettent les messages émotionnels. L'équilibre de ces humeurs assure que
+                    nous restions de "bonne humeur". Cette conception a dominé la médecine pendant des siècles.
+                </p>
+
+                <h4 class="text-2xl font-medium mt-6 mb-2">Illustration Médiévale du Cerveau 🧠</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Au Moyen Âge, la progression des idées sur le cerveau est restée figée dans le dualisme entre
+                    matière et esprit. Une illustration célèbre de Gregor Reisch dans son ouvrage <em>Margarita
+                        philosophica</em> montre les conceptions médiévales du cerveau, avec des zones dédiées au "sens
+                    commun", à la "cogitation et estimation", et au "stockage de la mémoire".
+                </p>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Le Moyen Âge : Stagnation et Influence de la Religion 🕰️
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La progression des idées sur le cerveau est restée figée dans le dualisme entre matière et esprit.
+                    L'importance était accordée aux pratiques magiques et aux idées mystiques. L'âme humaine était
+                    considérée comme dépassant toute connaissance fondée sur la rationalité.
+                </p>
+                <h4 class="text-2xl font-medium mb-2">Sources Occultes de la "Science Expérimentale" 🔮</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Au XIIIᵉ siècle, apparition de "l'expérimentation" dans la pratique magique issue de l'alchimie.
+                    L'expérimentateur est empiriste, et la connaissance élaborée relève du savoir technique visant à
+                    modifier la matière.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La magie est ésotérique, fondée sur la tradition et l'initiation, tandis que la science est
+                    exotérique, avec possibilité de reproduction de ses résultats quand les techniques sont connues.
+                </p>
+
+                <h4 class="text-2xl font-medium mt-6 mb-2">Roger Bacon (1220-1292) 🧪</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Pionnier de la science expérimentale, il insiste sur l'importance d'expérimenter pour agir sur les
+                    phénomènes naturels et acquérir une efficacité pratique. Pour lui, la science expérimentale doit
+                    apporter des connaissances et la définition même de la connaissance se modifie : il ne s'agit plus
+                    tant de connaître ce que sont les choses (ontologie), que la manière dont elles fonctionnent.
+                </p>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">La Renaissance : Naissance de la Science Moderne 🌅</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Rupture entre la science et la religion catholique. Philosophie, magie et sciences se conjuguent
+                    afin d’expliquer le monde. La science se situe entre magie et hérésie, cherchant à expliquer les
+                    mystères de la nature.
+                </p>
+
+                <div class="author-group flex flex-col sm:flex-row sm:space-x-4 mt-4">
+                    <div
+                        class="flex-1 bg-green-100 p-4 rounded-lg shadow transition transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <h4 class="text-xl font-medium mb-2">Les Fondements de la Science 🔬</h4>
+                        <ul class="list-disc pl-4 text-gray-700 space-y-2">
+                            <li><strong>Francis Bacon (1561-1626)</strong> : Explicite les principes de la science
+                                moderne basée sur l'observation et l'expérimentation empiriques. Il affirme que la
+                                science doit déchiffrer la nature par une démarche aux fondements empiriques, accumulant
+                                les faits avant d'en découvrir l'ordonnancement propre. Selon lui, l'État doit réformer
+                                les universités, créer les institutions adéquates, pour donner à la recherche une place
+                                essentielle.</li>
+                            <li><strong>André Vésale (1514-1564)</strong> : Réalise la première description complète de
+                                la forme et de l’apparence du cerveau. Son ouvrage <em>De humani corporis fabrica</em>
+                                (1543) est une référence en anatomie.</li>
+                            <li><strong>René Descartes (1596-1650)</strong> : Fasciné par l’origine des idées, il
+                                propose le dualisme corps-esprit et compare le corps à une machine très perfectionnée,
+                                parcourue de tuyaux permettant des échanges de fluides. Il introduit la notion de
+                                <strong>réflexes</strong> mécaniques et considère la glande pinéale comme le
+                                <strong>lieu d'union entre l'âme et le corps</strong>, où l'âme immatérielle interagit
+                                avec le corps matériel.</li>
+                            <li><strong>Thomas Willis (1621-1675)</strong> : Rejette la théorie des ventricules,
+                                identifie les plissements du cerveau comme abritant la pensée, nomme diverses structures
+                                cérébrales et propose une classification du système nerveux en central, périphérique et
+                                autonome.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 class="text-2xl font-medium mt-6 mb-2">Science et Divertissement 🎭</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Dès le XVIIᵉ siècle, la science expérimentale cherche à expliquer les mystères de la nature. La
+                    pensée scientifique commence à devenir de plus en plus expérimentale. La "magie blanche" ou
+                    "physique amusante" utilise des expériences (jeux d'illusion) utilisant les principes scientifiques,
+                    comme la lanterne magique.
+                </p>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">L’Empirisme 🔍</h3>
+                <div class="author-group flex flex-col sm:flex-row sm:space-x-4 mt-4">
+                    <div
+                        class="flex-1 bg-indigo-100 p-4 rounded-lg shadow transition transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <h4 class="text-xl font-medium mb-2">John Locke (1632-1704) 📝</h4>
+                        <ul class="list-disc pl-4 text-gray-700 space-y-2">
+                            <li>Soutient que l’esprit est une "tabula rasa" (page blanche) à la naissance, et que toutes
+                                les connaissances proviennent de l’expérience sensorielle.</li>
+                            <li>Les idées se construisent à partir des sens, les informations reçues se combinent pour
+                                former l'expérience mentale.</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex-1 bg-pink-100 p-4 rounded-lg shadow mt-4 sm:mt-0 transition transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <h4 class="text-xl font-medium mb-2">Étienne Bonnot de Condillac (1715-1780) 🧠</h4>
+                        <ul class="list-disc pl-4 text-gray-700 space-y-2">
+                            <li>Élabore une théorie de la connaissance basée sur les sensations.</li>
+                            <li>Processus cognitifs : sensation, attention, jugement, réflexion et raisonnement.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Le Siècle des Lumières 💡</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Le progrès repose sur la connaissance objective et empirique, détachée des systèmes
+                        métaphysiques.</li>
+                    <li>Intérêt pour les arts mécaniques et la science expérimentale.</li>
+                    <li><strong>Denis Diderot</strong> : Publie l'<em>Encyclopédie ou Dictionnaire raisonné des
+                            sciences, des arts et des métiers</em> (1751), reflétant l'esprit des Lumières.</li>
+                </ul>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Christian Wolff (1679-1754) 📐</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Psychologie comme science empirique, fondée sur des calculs et des mesures
+                        (<strong>psychométrie</strong>).</li>
+                    <li>Distinction entre expérience empirique (indépendante de toute intervention extérieure) et
+                        expérience rationnelle (nécessite une intervention extérieure).</li>
+                </ul>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Christian Gottfried Schütz 📝</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Établit des règles méthodologiques pour la méthode empiriste :</li>
+                    <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                        <li>Réaliser de nombreuses observations.</li>
+                        <li>Noter les phénomènes en détail.</li>
+                        <li>Tenir compte de tous les aspects observables.</li>
+                    </ul>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La discussion sur les méthodes est emblématique de la science dont elle relève. Diverses ébauches,
+                    différents programmes de recherche et projets de discipline se développent, avec pour projet
+                    d'établir une science naturelle de l'âme jointe au corps.
+                </p>
+            </div>
+        </section>
+
+        <!-- Fondements -->
+        <section id="fondements" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Fondements de la Psychologie Scientifique 🧠🔬
+                </h2>
+
+                <h3 class="text-3xl font-semibold mb-2">Les Pionniers de la Psychologie Scientifique : La Psychophysique
+                    🧪</h3>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Wilhelm Wundt (1832-1920) 🧪</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Contribution</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>Considéré comme le <strong>fondateur de la psychologie expérimentale</strong>.</li>
+                            <li>A fondé le <strong>premier laboratoire de psychologie expérimentale</strong> à Leipzig.
+                            </li>
+                            <li>Cherchait à isoler les composants des processus mentaux.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Méthode</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>A combiné des mesures objectives (temps de réponse, taux d'erreurs) avec
+                                l'<strong>introspection</strong>.</li>
+                            <li>Visait à comprendre les structures de la conscience.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Gustav Fechner (1801-1887) 📊</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Contribution</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>Pionnier de la psychologie expérimentale et <strong>fondateur de la
+                                    psychophysique</strong>.</li>
+                            <li>La psychophysique vise à établir les relations quantitatives entre les <strong>stimuli
+                                    physiques</strong> et les <strong>sensations perçues</strong>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Principes Clés</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li><strong>Loi de Weber-Fechner</strong> : Relation logarithmique entre l'intensité du
+                                stimulus et l'intensité de la sensation.</li>
+                            <li>Étude des <strong>seuils perceptifs</strong> (seuil absolu, seuil différentiel).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Exemples en Psychophysique 🎚️</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Fechner a établi des liens entre les caractéristiques physiques d'un stimulus et la sensation
+                    correspondante. Par exemple :
+                </p>
+                <table class="table-auto w-full text-gray-700 mt-4">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Stimulation Lumineuse</th>
+                            <th class="px-4 py-2">Sensation Visuelle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">Intensité (w) ou luminance (cd/m²)</td>
+                            <td class="border px-4 py-2">Luminosité (sombre, clair)</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Longueur d'onde (nm)</td>
+                            <td class="border px-4 py-2">Teinte (rouge, vert)</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Facteur de pureté (%)</td>
+                            <td class="border px-4 py-2">Saturation (pâle, vif)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">La Méthode Soustractive de Francis Donders ✂️</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Francis Donders (1818-1889)</strong> propose l’existence d’une série d’opérations mentales
+                    qui se succèdent entre une stimulation et une réponse motrice. Il développe la chronométrie mentale
+                    pour mesurer le temps de réalisation par le cerveau d’une opération mentale spécifique en
+                    soustrayant le temps nécessaire pour effectuer une tâche sans cette opération.
+                </p>
+                <h5 class="text-xl font-medium mb-2">Conditions Expérimentales 🧪</h5>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Condition 1</strong> : Réagir le plus rapidement possible à une lumière rouge (temps de
+                        réaction simple).</li>
+                    <li><strong>Condition 2</strong> : Réagir le plus rapidement possible à une lumière rouge (parmi
+                        deux lumières présentées aléatoirement) (temps de discrimination).</li>
+                    <li><strong>Condition 3</strong> : Réagir le plus rapidement possible à une lumière rouge en
+                        appuyant à droite, et à une lumière verte en appuyant à gauche (temps de décision).</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    En comparant les temps de réaction, Donders peut estimer le temps nécessaire pour des opérations
+                    mentales spécifiques en utilisant la méthode soustractive :
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>C2 – C1</strong> = Temps de discrimination.</li>
+                    <li><strong>C3 – C2</strong> = Temps de décision.</li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Exemple Concret de la Méthode Scientifique 🧪</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Hypothèse</strong> : "Écouter un cours pendant son sommeil permet une mémorisation du
+                    cours."
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Prédiction</strong> : Si on écoute un cours lors du sommeil, alors meilleure
+                        mémorisation.</li>
+                    <li><strong>Test empirique</strong> : Groupe 1 (20 participants) écoute un cours durant leur
+                        sommeil. Groupe 2 (20 participants) écoute une histoire durant leur sommeil.</li>
+                    <li><strong>Observation</strong> : Les deux groupes ont le même score au test de mémoire.</li>
+                    <li><strong>Interprétation</strong> : Écouter un cours durant son sommeil ne permet pas une
+                        meilleure mémorisation.</li>
+                    <li><strong>Conclusion</strong> : L’hypothèse est rejetée.</li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Alfred Binet (1857-1911) et l'Échelle Métrique de
+                    l'Intelligence 🧠</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Contribution</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>A développé la <strong>première échelle métrique de l'intelligence</strong> pour mesurer
+                                les capacités cognitives.</li>
+                            <li>Cherchait à identifier les <strong>processus mentaux supérieurs</strong> tels que la
+                                mémoire, l'attention, la compréhension, etc.</li>
+                            <li>A établi une liste des processus à observer pour mesurer l'intelligence : mémoire,
+                                images mentales, attention, compréhension, etc.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Méthode</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>A utilisé des tests standardisés pour évaluer les performances intellectuelles des
+                                enfants.</li>
+                            <li>Son travail a conduit au concept de <strong>"quotient intellectuel" (QI)</strong>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Importance</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>A souligné que l'expérimentation ne peut se limiter à l'étude des stimuli physiques et
+                                doit inclure des processus cognitifs complexes.</li>
+                            <li>Son approche a jeté les bases de la <strong>psychologie de l'éducation</strong> et de la
+                                <strong>psychométrie</strong>.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">La Phrénologie et le Localisationnisme 🧠📍</h3>
+                <h4 class="text-2xl font-medium mt-4 mb-2">La Phrénologie 🎓</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Franz Joseph Gall (1758-1828)</strong> : Propose que les facultés mentales sont
+                        localisées dans des zones spécifiques du cerveau, et que la forme du crâne reflète ces facultés.
+                        Il associe chacune des circonvolutions du cerveau à un comportement.</li>
+                    <li>La phrénologie a également influencé des concepts comme "l'homme criminel" de <strong>Cesare
+                            Lombroso (1835-1909)</strong>, établissant des liens entre physiognomonie et comportements
+                        déviants.</li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">L'Anthropométrie et Cesare Lombroso 🕵️</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Cesare Lombroso a développé la théorie de "l'homme criminel", suggérant que la criminalité est
+                    héréditaire et peut être identifiée par des caractéristiques physiques spécifiques. Cette approche a
+                    contribué au développement de l'anthropométrie, l'étude des mesures du corps humain.
+                </p>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Le Localisationnisme 📍</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Paul Broca (1824-1880)</strong> : Étudie le cas de "Tan" (V. Leborgne), incapable de
+                        parler, et découvre une lésion au niveau du lobe frontal gauche, établissant le lien entre une
+                        aire cérébrale spécifique et le langage. Première mise en lien d'un dysfonctionnement cognitif
+                        et d'une aire cérébrale.</li>
+                    <li><strong>Carl Wernicke (1848-1905)</strong> : Étend les recherches de Broca aux aires de la
+                        compréhension du langage, identifiant une lésion dans le lobe temporal gauche associée à un
+                        déficit de compréhension. Il propose que la faculté de langage émerge d'un réseau et non d'une
+                        région unique.</li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">La Psychologie Scientifique et les Nouveaux Outils 🧪🛠️
+                </h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La psychologie scientifique, dite également psychologie expérimentale, naît au milieu du XIXe
+                    siècle. Son émergence est due aux nouveaux outils liés aux évolutions technologiques :
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Le chronographe</strong> : Mesure du temps avec une grande précision.</li>
+                    <li><strong>Le stroboscope</strong> : Présentation dynamique d’images.</li>
+                    <li><strong>La boîte à rythme</strong> : Génération de sons à un rythme régulier.</li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">La Méthode Scientifique 🧭</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Elle consiste en :
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>L’art du doute</strong> : Être sceptique et chercher à falsifier.</li>
+                    <li><strong>La cohérence</strong> : S’inquiéter lorsque des idées et des connaissances sont
+                        contradictoires.</li>
+                    <li><strong>La prudence</strong> : Être parcimonieux dans les interprétations et les conclusions que
+                        l’on tire.</li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La psychologie cognitive emploie la méthode expérimentale et le test d’hypothèse.
+                </p>
+                <!-- Exemple concret déjà inclus plus haut -->
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">La Neuro-anatomie 🧠🔍</h3>
+                <h4 class="text-2xl font-medium mb-2">Cas de Phineas Gage 🛠️</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Suite à un accident provoquant des dommages au lobe frontal gauche de son cerveau, Phineas Gage
+                    subit un changement notable de personnalité. Ce cas a mis en évidence le lien entre certaines zones
+                    cérébrales et les comportements sociaux.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Damasio et al. (1994)</strong> ont étudié le cas de Phineas Gage, fournissant une analyse
+                    moderne de l'accident et de ses conséquences neurologiques.
+                </p>
+                <h4 class="text-2xl font-medium mb-2">Santiago Ramón y Cajal (1852-1934) 🧬</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Contributions</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>A utilisé la <strong>coloration argentique</strong> (méthode de Golgi) pour visualiser
+                                les neurones.</li>
+                            <li>A établi que le <strong>neurone</strong> est l'unité fondamentale du système nerveux
+                                (théorie du neurone).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Travaux</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>Ses <strong>dessins détaillés</strong> des neurones et des circuits neuronaux sont
+                                encore utilisés aujourd'hui.</li>
+                            <li>A décrit la <strong>polarisation dynamique</strong> des neurones, montrant comment les
+                                signaux se propagent dans une direction.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Importance</strong> :
+                        <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                            <li>Ses découvertes ont jeté les bases de la <strong>neuroanatomie moderne</strong> et ont
+                                influencé la compréhension du fonctionnement cérébral.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Grands Courants -->
+        <section id="courants" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Grands Courants de la Psychologie au XXe Siècle
+                    🧠📚</h2>
+
+                <h3 class="text-3xl font-semibold mb-2">Le Behaviorisme 🐾</h3>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Principes Clés 📜</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Se concentre sur l’étude des comportements observables, en ignorant les processus mentaux
+                        internes.</li>
+                    <li><strong>John B. Watson (1878-1958)</strong> : Considéré comme le fondateur du behaviorisme,
+                        affirme que le comportement est le résultat de stimuli environnementaux. Il réalise l'expérience
+                        du "Petit Albert" pour démontrer le conditionnement émotionnel.</li>
+                </ul>
+                <h5 class="text-xl font-medium mt-4 mb-2">Expérience du "Petit Albert" 🧸</h5>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Watson a conditionné un enfant de 11 mois, surnommé "Petit Albert", à avoir peur d'un rat blanc en
+                    associant la présentation du rat à un bruit fort et effrayant. Cette expérience a démontré que les
+                    réactions émotionnelles peuvent être conditionnées.
+                </p>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Le Conditionnement 🔄</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Ivan Pavlov (1849-1936)</strong> : Développe le concept de conditionnement classique à
+                        travers ses expériences avec les chiens, où une réponse inconditionnée (salivation) est associée
+                        à un stimulus neutre (cloche).</li>
+                    <li><strong>Burrhus Frederic Skinner (1904-1990)</strong> : Introduit le conditionnement opérant,
+                        démontrant que les comportements peuvent être modifiés par leurs conséquences (renforcement ou
+                        punition). Il utilise la "Skinner Box" pour ses expériences.</li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Exemples de Renforcement et de Punition 🧪</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Dans la "Skinner Box" :
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Renforcement positif</strong> : Le rat appuie sur le levier et reçoit de la nourriture,
+                        augmentant la probabilité du comportement.</li>
+                    <li><strong>Renforcement négatif</strong> : Le rat appuie sur le levier pour arrêter un choc
+                        électrique, augmentant la probabilité du comportement.</li>
+                    <li><strong>Punition positive</strong> : Le rat appuie sur le levier et reçoit un choc électrique,
+                        diminuant la probabilité du comportement.</li>
+                    <li><strong>Punition négative</strong> : Le rat appuie sur le levier et la nourriture est retirée,
+                        diminuant la probabilité du comportement.</li>
+                </ul>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Différences entre Conditionnement Répondant et Opérant 🧩
+                </h4>
+                <table class="table-auto w-full text-gray-700 mt-4">
+                    <thead>
+                        <tr>
+                            <th class="px-4 py-2">Conditionnement Répondant</th>
+                            <th class="px-4 py-2">Conditionnement Opérant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border px-4 py-2">Comportement non suivi de conséquences</td>
+                            <td class="border px-4 py-2">Comportement ayant un effet sur l'environnement</td>
+                        </tr>
+                        <tr>
+                            <td class="border px-4 py-2">Apparenté à des réflexes</td>
+                            <td class="border px-4 py-2">Lié à des conduites complexes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 class="text-2xl font-medium mt-4 mb-2">Critiques du Behaviorisme 🧐</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Abandon de l'étude de la vie mentale interne.</li>
+                    <li>Caractère mécaniste du modèle stimulus-réponse.</li>
+                    <li>Primauté des effets de l'environnement dans le déterminisme du comportement.</li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">La Gestalt-théorie 🧩</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Met l’accent sur la perception globale et l’organisation des éléments en formes cohérentes.</li>
+                    <li>Affirme que "le tout est différent de la somme de ses parties", soulignant l’importance des
+                        relations entre les éléments perçus.</li>
+                    <li>Ne se limite pas à la perception, s'applique également à la mémoire et à d'autres processus
+                        cognitifs.</li>
+                    <li>Opposition au behaviorisme : Dans le behaviorisme, on part des éléments simples pour arriver au
+                        tout, tandis que dans la Gestalt, le tout prime sur les parties.</li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">La Révolution Cognitive 💡🧠</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La révolution cognitive a émergé en réaction aux limitations du behaviorisme, remettant l'accent sur
+                    les processus mentaux internes. L'apparition des ordinateurs a fourni une nouvelle métaphore pour
+                    comprendre le cerveau comme un processeur d'informations.
+                </p>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Contributions Clés 📚</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Ulric Neisser (1928-2012)</strong> : Considéré comme l'un des fondateurs de la
+                        psychologie cognitive moderne. Son livre "Cognitive Psychology" (1967) a défini le domaine et a
+                        souligné l'importance de l'étude des processus mentaux.</li>
+                    <li><strong>Modèles de Traitement de l'Information</strong> : Étude de la mémoire, de l'attention,
+                        du langage sous forme de processus séquentiels, similaires au fonctionnement d'un ordinateur.
+                    </li>
+                    <li>Étude de la mémoire à court terme et à long terme, développement de modèles comme le modèle de
+                        la mémoire de travail de Baddeley et Hitch.</li>
+                </ul>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Influence de l'Informatique 💻</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    L'informatique et l'intelligence artificielle ont influencé la psychologie cognitive en offrant des
+                    modèles pour comprendre comment l'information est traitée, stockée et récupérée. Les psychologues
+                    cognitifs ont commencé à utiliser des métaphores informatiques pour décrire les processus mentaux.
+                </p>
+            </div>
+        </section>
+
+        <!-- Émergence des Sciences Cognitives -->
+        <section id="emergence" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Émergence des Sciences Cognitives 🌐</h2>
+
+                <h3 class="text-3xl font-semibold mb-2">Interdisciplinarité et Nouvelles Perspectives 🔄</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Les sciences cognitives rassemblent différentes disciplines qui relèvent de la cognition, telles que
+                    la philosophie, la psychologie cognitive, l'informatique et l'intelligence artificielle, la
+                    linguistique, et les neurosciences. Elles émergent dans les années 1950-1960.
+                </p>
+                <h4 class="text-2xl font-medium mb-2">Les Conférences Macy (1946-1953) 🧠</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Organisées par la Fondation Macy, ces conférences réunissent un groupe interdisciplinaire de
+                    chercheurs : mathématiciens, logiciens, anthropologues, psychologues, neurologues, etc. Elles sont à
+                    l'origine du courant cybernétique, des sciences cognitives et des sciences de l’information.
+                </p>
+                <blockquote class="italic border-l-4 pl-4 text-gray-700 mb-4">
+                    "Notre espoir est que les participants viendront non pas préparés à défendre un point de vue unique
+                    mais à utiliser avantageusement la réunion comme une occasion de parler à des représentants d'autres
+                    disciplines de la même manière qu'ils discutent avec leurs propres collègues dans leurs propres
+                    laboratoires." - Frank Fremont-Smith
+                </blockquote>
+                <h4 class="text-2xl font-medium mb-2">Norbert Wiener (1894-1964) 📡</h4>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Fondateur de la cybernétique, étude de l'information dans les systèmes naturels et artificiels.
+                    </li>
+                    <li>Contributions majeures à la théorie des communications et des systèmes de contrôle.</li>
+                </ul>
+
+                <div class="author-group flex flex-col sm:flex-row sm:space-x-4 mt-4">
+                    <div
+                        class="flex-1 bg-teal-100 p-4 rounded-lg shadow transition transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <h4 class="text-xl font-medium mb-2">Avancées Technologiques et Théoriques 🚀</h4>
+                        <ul class="list-disc pl-4 text-gray-700 space-y-2">
+                            <li><strong>Alan Turing (1912-1954)</strong> : Propose la machine de Turing et explore la
+                                possibilité de machines capables de penser. En 1950, il propose le <strong>test de
+                                    Turing</strong> pour déterminer si une machine peut exhiber un comportement
+                                intelligent indiscernable de celui d'un humain.</li>
+                            <li>Exemples de règles de la machine de Turing :</li>
+                            <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                                <li>Si on lit "a" dans l'état T, alors on remplace "a" par "A", on lit la case droite et
+                                    on reste en T.</li>
+                                <li>Si on lit "A" dans l'état T, alors on lit la case droite et on reste en T.</li>
+                                <li>Si on lit une case vide dans l'état T, alors on passe dans l'état F.</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div
+                        class="flex-1 bg-purple-100 p-4 rounded-lg shadow mt-4 sm:mt-0 transition transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <h4 class="text-xl font-medium mb-2">Naissance des Sciences Cognitives en 1956 🎓</h4>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Conférence au MIT où plusieurs chercheurs présentent des travaux fondateurs :
+                        </p>
+                        <ul class="list-disc pl-4 text-gray-700 space-y-2">
+                            <li><strong>Allan Newell et Herbert Simon</strong> : Présentent le <strong>Logic
+                                    Theorist</strong>, premier programme d'intelligence artificielle capable de
+                                démontrer des théorèmes mathématiques. Ils conçoivent également le <strong>General
+                                    Problem Solver (GPS)</strong>, un programme informatique visant à simuler le
+                                raisonnement humain. Leur but est de démontrer que chaque problème peut être décomposé
+                                en une série de buts intermédiaires, explorant différentes voies jusqu'à ce que la
+                                solution soit trouvée.</li>
+                            <li><strong>Noam Chomsky</strong> : Introduit la théorie de la grammaire générative,
+                                suggérant que la capacité linguistique est innée. Il propose que l'esprit est prédisposé
+                                à acquérir le langage grâce à des règles universelles. Par exemple, la phrase "Ballon
+                                tombé !" chez un enfant illustre la compétence naturelle à construire des phrases en
+                                associant des mots selon des règles.</li>
+                            <li><strong>George Miller (1920-2012)</strong> : Présente sa théorie de la mémoire,
+                                notamment le "nombre magique 7 ± 2", démontrant que la mémoire à court terme est limitée
+                                à 7 éléments plus ou moins 2. Il souligne que l'esprit emploie une méthode consistant à
+                                regrouper les éléments en "chunks". En 1960, Miller et Bruner fondent le "Center of
+                                Cognitive Psychology" à Harvard pour mettre en évidence les stratégies mentales
+                                utilisées par des sujets face à un problème.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Influences Réciproques 🔄</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Interactions entre psychologie cognitive, intelligence artificielle et informatique. Les ordinateurs
+                    servent de métaphore pour le raisonnement et le cerveau. Les modèles cognitifs sont une source
+                    d'inspiration pour les informaticiens, tandis que la rigueur algorithmique influence la psychologie
+                    cognitive.
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Psychologie cognitive ⟷ Intelligence Artificielle</li>
+                    <li>Informatique ⟷ Psychologie cognitive</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Les Sciences Cognitives Actuelles -->
+        <section id="sciences-actuelles" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Les Sciences Cognitives Actuelles 🧠💡</h2>
+
+                <h3 class="text-3xl font-semibold mb-2">Domaines d'Étude 🔬</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Reconnaissance des visages, lecture, programmation d'actions, émotion, conscience, rêves, etc.
+                    </li>
+                    <li>Étude des différents sous-systèmes de la cognition.</li>
+                </ul>
+
+                <h3 class="text-3xl font-semibold mt-6 mb-2">Ancrages des Sciences Cognitives 🧭</h3>
+                <h4 class="text-2xl font-medium mt-4 mb-2">1. Biologie du Cerveau 🧬</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Les principes de l'organisme vivant contraignent notre vie mentale. La vitesse des opérations
+                    mentales est liée à la vitesse de propagation des signaux électriques et des transitions
+                    moléculaires des récepteurs membranaires du cerveau.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <strong>Donders (1868)</strong> démontre que la conduction neuronale affecte les décisions mentales.
+                    Aujourd’hui, il a été démontré que :
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>La vitesse des opérations mentales s'accélère au cours du développement.</li>
+                    <li>Il y a une relation directe avec la myélinisation des axones.</li>
+                </ul>
+                <h4 class="text-2xl font-medium mt-4 mb-2">2. Lois Algorithmiques 💻</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Tout système de traitement de l'information suit des lois algorithmiques. La science de la
+                    computation vise à inventer et analyser des algorithmes aptes à résoudre divers problèmes cognitifs,
+                    comme la reconnaissance des visages, le stockage d'information, l'apprentissage de grammaire
+                    formelle, etc.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Cependant, la métaphore "Ordinateur ➔ Cerveau" a ses limites, notamment la négligence de
+                    l’architecture du cerveau. Le "software" représente la pensée (psychologie), tandis que le
+                    "hardware" représente le matériel (neurobiologie).
+                </p>
+                <h4 class="text-2xl font-medium mt-4 mb-2">3. Lois Physiques Internalisées ⚖️</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Le système nerveux apprend à comprendre l'environnement, internalisant les lois physiques sous forme
+                    de représentations mentales. Ceci se manifeste clairement dans la perception et l'action.
+                </p>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Exemple d'Imagerie Mentale Visuelle 🖼️</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Lorsqu'on imagine un objet et que l'on doit focaliser sur une partie spécifique, le temps nécessaire
+                    est fonction de la distance à parcourir dans l'image mentale. Ceci suggère une correspondance entre
+                    l'imagerie et la perception.
+                </p>
+                <h4 class="text-2xl font-medium mt-4 mb-2">Synthèse des Approches 🧩</h4>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Deux grands types d'approche :
+                </p>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li>Analyse des opérations mentales et reconstitution via des programmes informatiques.</li>
+                    <li>Étude du fonctionnement du cerveau pour comprendre comment la pensée émerge du système nerveux.
+                    </li>
+                </ul>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    La psychologie cognitive et les neurosciences collaborent pour comprendre comment une fonction
+                    cognitive émerge du système nerveux, avec un rôle central de l'imagerie cérébrale.
+                </p>
+            </div>
+        </section>
+
+        <!-- Découvertes Récentes -->
+        <section id="decouvertes" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Découvertes Récentes 🚀</h2>
+                <h3 class="text-3xl font-semibold mb-2">Projet ISEULT 🧲</h3>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    Le projet ISEULT vise à développer un scanner IRM à très haut champ magnétique pour l'imagerie
+                    cérébrale, améliorant significativement la résolution et ouvrant de nouvelles perspectives en
+                    neurosciences cognitives.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    <a href="https://www.youtube.com/watch?v=nbeLsBdFQQY" class="text-blue-600 hover:underline">Vidéo du
+                        CEA Paris-Saclay sur le projet ISEULT (Partie 1)</a><br>
+                    <a href="https://www.youtube.com/watch?v=DYdhj6P_zaQ" class="text-blue-600 hover:underline">Vidéo du
+                        CEA Paris-Saclay sur le projet ISEULT (Partie 2)</a>
+                </p>
+
+                <h3 class="text-3xl font-semibold mb-2">Autres Projets Récents 🌟</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-2">
+                    <li><strong>Projet Human Brain Project</strong> : Initiative européenne visant à modéliser le
+                        cerveau humain en détail pour mieux comprendre ses fonctions et dysfonctionnements.</li>
+                    <li><strong>DeepMind et AlphaGo</strong> : Utilisation de l'intelligence artificielle pour maîtriser
+                        des jeux complexes, démontrant des avancées significatives en apprentissage profond et en
+                        stratégies cognitives.</li>
+                    <li><strong>Neuroimagerie avancée</strong> : Développements dans les techniques d'imagerie cérébrale
+                        permettant une visualisation plus précise des réseaux neuronaux actifs lors de diverses tâches
+                        cognitives.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion" class="container mx-auto px-6 mb-12">
+            <div class="content-box transition hover:shadow-xl duration-300">
+                <h2 class="text-5xl font-extrabold text-gradient mb-4">Conclusion 🏁</h2>
+                <p class="text-gray-700 leading-relaxed">
+                    Les sciences cognitives sont le fruit d’une évolution longue et complexe, intégrant des idées de la
+                    philosophie, de la médecine, de la psychologie et de l’informatique. Elles représentent aujourd’hui
+                    un domaine dynamique et interdisciplinaire, essentiel pour comprendre les mécanismes sous-jacents à
+                    la pensée et au comportement humains. Ce cours a retracé les étapes clés de cette évolution, mettant
+                    en lumière les contributions majeures qui ont façonné notre compréhension actuelle de la cognition.
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
